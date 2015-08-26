@@ -1,0 +1,902 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY MP "http://purl.org/obo/owl/MP#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY www "http://www.owl-ontologies.com/2009/11/5/" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY PKO2 "http://www.owl-ontologies.com/2009/11/5/PKO.owl#3-" >
+    <!ENTITY PKO3 "http://www.owl-ontologies.com/2009/11/5/PKO.owl#2-" >
+    <!ENTITY version2 "http://www.loria.fr/~coulet/ontology/sopharm/version2.1/#" >
+    <!ENTITY meta "http://www.co-ode.org/ontologies/meta/2005/06/15/meta.owl#" >
+    <!ENTITY disease_ontology "http://www.loria.fr/~coulet/ontology/sopharm/version2.1/disease_ontology.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&www;PKO.owl#"
+     xml:base="&www;PKO.owl"
+     xmlns:www="http://www.owl-ontologies.com/2009/11/5/"
+     xmlns:MP="http://purl.org/obo/owl/MP#"
+     xmlns:PKO3="&www;PKO.owl#2-"
+     xmlns:PKO2="&www;PKO.owl#3-"
+     xmlns:meta="http://www.co-ode.org/ontologies/meta/2005/06/15/meta.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:disease_ontology="http://www.loria.fr/~coulet/ontology/sopharm/version2.1/disease_ontology.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:version2="http://www.loria.fr/~coulet/ontology/sopharm/version2.1/#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/DINTO_PKO_subset.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#AUC -->
+
+    <owl:Class rdf:about="&www;PKO.owl#AUC">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Area under the concentration-time curve.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: mg h L-1 </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#AUCIV -->
+
+    <owl:Class rdf:about="&www;PKO.owl#AUCIV">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string"> mg h L-1</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Area under the concentration-time curve after intravenous route of administration.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#AUCR -->
+
+    <owl:Class rdf:about="&www;PKO.owl#AUCR">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">AUC ratio (drug interaction parameter)., </rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Reference: NA</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: Unit free</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">unknown class</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#AUCSS -->
+
+    <owl:Class rdf:about="&www;PKO.owl#AUCSS">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Area under the drug concentration time curve within a dosing curve at steady state,</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Reference: RT pxi</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">units: mg h L-1</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#AUCinf -->
+
+    <owl:Class rdf:about="&www;PKO.owl#AUCinf">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Area under the drug concentration time curve.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Reference: RT p37</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: mg h L-1 </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#AUCpo -->
+
+    <owl:Class rdf:about="&www;PKO.owl#AUCpo">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Area under the concentration-time curve after per oral route of administration.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: mg h L-1</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#AUCt -->
+
+    <owl:Class rdf:about="&www;PKO.owl#AUCt">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Area under the drug concentration time curve from time 0 to t., </rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Reference: RT p37</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: mg h L-1</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#AUMC -->
+
+    <owl:Class rdf:about="&www;PKO.owl#AUMC">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Area under the first moment of concentration versus time curve,</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Reference: RT p486</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: mg-hr2/L or uM-hr2/L</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#CL -->
+
+    <owl:Class rdf:about="&www;PKO.owl#CL">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Reference: RT p23</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Total clearance is defined as the proportionality factor relating rate of drug elimination to the plasma drug concentration, </rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: ml h-1</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#CL12 -->
+
+    <owl:Class rdf:about="&www;PKO.owl#CL12">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Inter-compartment distribution between the central compartment and the peripheral compartment.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: ml h-1</rdfs:comment>
+        <rdfs:comment>Reference: NA</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#CLH -->
+
+    <owl:Class rdf:about="&www;PKO.owl#CLH">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Hepatic portion of the total clearance.   </rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: ml h-1</rdfs:comment>
+        <rdfs:comment>Reference: RT p161</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#CLR -->
+
+    <owl:Class rdf:about="&www;PKO.owl#CLR">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Renal portion of the total clearance.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: ml h-1</rdfs:comment>
+        <rdfs:comment>Reference: RT p161</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#CL_ratio -->
+
+    <owl:Class rdf:about="&www;PKO.owl#CL_ratio">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Ratio of the clearance (drug interaction parameter). </rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: Unit free</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">unknown class</rdfs:comment>
+        <rdfs:comment>Reference: NA</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#CLb -->
+
+    <owl:Class rdf:about="&www;PKO.owl#CLb">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Blood clearance is defined as the proportionality factor relating rate of drug elimination to the blood drug concentration, </rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Reference: RT p160</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: ml h-1</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#CLint -->
+
+    <owl:Class rdf:about="&www;PKO.owl#CLint">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invitro"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Intrinsic metabolic clearance is defined as ratio of maximum metabolism rate, Vmax, and the Michaelis-Menten constant, Km.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Reference: RT p165</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: ml h-1 mg-1 protein</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#CLiv -->
+
+    <owl:Class rdf:about="&www;PKO.owl#CLiv">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string"> Units:ml h-1</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Total clearance of drug following an IV dose.</rdfs:comment>
+        <rdfs:comment>Reference: NA</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#CLpo -->
+
+    <owl:Class rdf:about="&www;PKO.owl#CLpo">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Total clearance of drug following an oral dose. </rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: ml h-1</rdfs:comment>
+        <rdfs:comment>Reference: NA</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#CLu -->
+
+    <owl:Class rdf:about="&www;PKO.owl#CLu">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Reference: RT p163</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Unbound clearance is defined as the proportionality factor relating rate of drug elimination to the unbounded plasma drug concentration,</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: ml h-1</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">unknown class</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#Cmax -->
+
+    <owl:Class rdf:about="&www;PKO.owl#Cmax">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Highest drug concentration observed in plasma following administration of an extravascular dose. </rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: mg L-1</rdfs:comment>
+        <rdfs:comment>Reference: RT pxii</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#Cmax_ratio -->
+
+    <owl:Class rdf:about="&www;PKO.owl#Cmax_ratio">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The ratio of Cmax (drug interaction parameter).</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: Unit free</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">unknown</rdfs:comment>
+        <rdfs:comment>Reference: NA</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#Css -->
+
+    <owl:Class rdf:about="&www;PKO.owl#Css">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string"> Units: mg L-1</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Concentration of drug in plasma at steady state during a constant rate intravenous infusion.</rdfs:comment>
+        <rdfs:comment>Reference: RT pxii</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#Css_ratio -->
+
+    <owl:Class rdf:about="&www;PKO.owl#Css_ratio">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The ratio of Css (drug interaction parameter). </rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: Unit free</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">unknown class</rdfs:comment>
+        <rdfs:comment>Reference: NA</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#E -->
+
+    <owl:Class rdf:about="&www;PKO.owl#E">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Extraction ratio is defined as the ratio between blood clearance, CLb, and the blood flow. </rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: Unit free</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">unknown class</rdfs:comment>
+        <rdfs:comment>Reference: RT p159</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#EC50 -->
+
+    <owl:Class rdf:about="&www;PKO.owl#EC50">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invitro"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Induction</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Reference: NA</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: mg L-1</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#EH -->
+
+    <owl:Class rdf:about="&www;PKO.owl#EH">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Hepatic extraction ratio. </rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: Unit free</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">unknown</rdfs:comment>
+        <rdfs:comment>Refence: RT p161</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#Emax -->
+
+    <owl:Class rdf:about="&www;PKO.owl#Emax">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invitro"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Maximum Effect,units of response measurement
+(fold-change), EC50 (uM) (inducer)</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Reference: NA</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: Unit free</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#F -->
+
+    <owl:Class rdf:about="&www;PKO.owl#F">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Bioavailability is defined as the proportion of the drug reaches the systemic blood.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: Unit free</rdfs:comment>
+        <rdfs:comment>Reference: RT p42</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#FG -->
+
+    <owl:Class rdf:about="&www;PKO.owl#FG">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Gut-wall bioavailability.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: Unit free</rdfs:comment>
+        <rdfs:comment>Reference: NA</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#FH -->
+
+    <owl:Class rdf:about="&www;PKO.owl#FH">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Hepatic availability:  Fraction of drug entering the liver that escapes elimination on single passage through the organ.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: Unit free</rdfs:comment>
+        <rdfs:comment>Reference: RT p167</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#FPO -->
+
+    <owl:Class rdf:about="&www;PKO.owl#FPO">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Oral bioavailability:  fraction of an oral dose that enters the systemic circulation.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: Unit free</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#FR -->
+
+    <owl:Class rdf:about="&www;PKO.owl#FR">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Renal bioavailability.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: Unit free</rdfs:comment>
+        <rdfs:comment>Reference: RT p170</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#IC50 -->
+
+    <owl:Class rdf:about="&www;PKO.owl#IC50">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invitro"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Inhibitor concentration that inhibits to 50% of enzyme activity.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Reference: NA</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: mg L-1</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#KI -->
+
+    <owl:Class rdf:about="&www;PKO.owl#KI">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invitro"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Reference: Rostami-Hodjegan and Tucker p443.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">The concentration of inhibitor associated with half maximal Inactivation in the mechanism based inhibition.
+</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: mg L-1</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#Kdeg -->
+
+    <owl:Class rdf:about="&www;PKO.owl#Kdeg">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invitro"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Reference: Rostami-Hodjegan and Tucker p443.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">The natural degradation rate constant for the Enzyme.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: h-1</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#Ki -->
+
+    <owl:Class rdf:about="&www;PKO.owl#Ki">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invitro"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Inhibition rate constant for competitive inhibition, noncompetitive inhibition, and uncompetitive inhibition.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Reference: Segel p103</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: mg L-1</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#Kinact -->
+
+    <owl:Class rdf:about="&www;PKO.owl#Kinact">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invitro"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Reference: Rostami-Hodjegan and Tucker p443.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">The maximum degradation rate constant in the presence of a high concentration of inhibitor in the mechanism based inhibition.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: h-1</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#Km -->
+
+    <owl:Class rdf:about="&www;PKO.owl#Km">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invitro"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Michaelis-Menten constant.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Reference: Segel p28.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: mg L-1</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#MR -->
+
+    <owl:Class rdf:about="&www;PKO.owl#MR">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Metabolic ratio.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#MRT -->
+
+    <owl:Class rdf:about="&www;PKO.owl#MRT">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Mean Residence Time:  Mean time a molecule resides in the body.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: h</rdfs:comment>
+        <rdfs:comment>Reference: RT pxiv</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#Metabolic_ratio -->
+
+    <owl:Class rdf:about="&www;PKO.owl#Metabolic_ratio">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invitro"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Parent drug /metabolite concentration ratio</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Reference: NA</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: NA</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#PK_Parameters_invitro -->
+
+    <owl:Class rdf:about="&www;PKO.owl#PK_Parameters_invitro"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#PK_Parameters_invivo -->
+
+    <owl:Class rdf:about="&www;PKO.owl#PK_Parameters_invivo"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#Papp -->
+
+    <owl:Class rdf:about="&www;PKO.owl#Papp">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invitro"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#Q -->
+
+    <owl:Class rdf:about="&www;PKO.owl#Q">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Blood flow.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: L h-1</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">unknown</rdfs:comment>
+        <rdfs:comment>Reference: RT pxiv</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#QH -->
+
+    <owl:Class rdf:about="&www;PKO.owl#QH">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Hepatic blood flow.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: L h-1</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">unknown</rdfs:comment>
+        <rdfs:comment>Reference: RT pxiv</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#Radioactivity -->
+
+    <owl:Class rdf:about="&www;PKO.owl#Radioactivity">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invitro"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#Re -->
+
+    <owl:Class rdf:about="&www;PKO.owl#Re">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invitro"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#Uptake_Volume -->
+
+    <owl:Class rdf:about="&www;PKO.owl#Uptake_Volume">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invitro"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#V -->
+
+    <owl:Class rdf:about="&www;PKO.owl#V">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: L</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Volume of distribution based on drug concentration in plasma. </rdfs:comment>
+        <rdfs:comment>Reference: RT pxiv</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#V1 -->
+
+    <owl:Class rdf:about="&www;PKO.owl#V1">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: L</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Volume of distribution of the central compartment.</rdfs:comment>
+        <rdfs:comment>Reference: RT pxiv</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#V2 -->
+
+    <owl:Class rdf:about="&www;PKO.owl#V2">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: L</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Volume of distribution of the peripheral compartment.</rdfs:comment>
+        <rdfs:comment>Reference: RT pxiv</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#Vb -->
+
+    <owl:Class rdf:about="&www;PKO.owl#Vb">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Unit: L</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Volume of distribution based on drug concentration in blood.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">unknown</rdfs:comment>
+        <rdfs:comment>Reference: RT pxiv</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#Vd -->
+
+    <owl:Class rdf:about="&www;PKO.owl#Vd">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Apparent volume of distribution , it describes the volume of the fluid required which would  account for all the drug in the body.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#Vdarea -->
+
+    <owl:Class rdf:about="&www;PKO.owl#Vdarea">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Apparent volume of distribution based on trapezoidal AUC (area) and elimination rate.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#Vdext -->
+
+    <owl:Class rdf:about="&www;PKO.owl#Vdext">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Extrapolated volume of distribution.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#Vdss -->
+
+    <owl:Class rdf:about="&www;PKO.owl#Vdss">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Volume of distribution at steady state.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#Vmax -->
+
+    <owl:Class rdf:about="&www;PKO.owl#Vmax">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Maximum rate of metabolism by an enzymatically mediated reaction.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Reference: Segel p19 and RT pxiv</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: mg h-1 mg-1 protein</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#Vss -->
+
+    <owl:Class rdf:about="&www;PKO.owl#Vss">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: L</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Volume of distribution under the steady state concentration.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">unknown</rdfs:comment>
+        <rdfs:comment>Reference: RT pxiv</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#fe -->
+
+    <owl:Class rdf:about="&www;PKO.owl#fe">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Fraction of drug systemically available that is excreted unchanged in urine. </rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: Unit free</rdfs:comment>
+        <rdfs:comment>Reference: RT pxiii</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#fm -->
+
+    <owl:Class rdf:about="&www;PKO.owl#fm">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Fraction of drug systemically available that is converted to a metabolite.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: Unit free</rdfs:comment>
+        <rdfs:comment>Reference: RT pxiii</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#fm_enzyme -->
+
+    <owl:Class rdf:about="&www;PKO.owl#fm_enzyme">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invitro"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Fraction of drug systemically available that is converted to a metabolite through a specific enzyme.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Reference: RT xiii</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: NA</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#fu -->
+
+    <owl:Class rdf:about="&www;PKO.owl#fu">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Ratio of unbound and total drug concentrations in plasma.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: Unit free</rdfs:comment>
+        <rdfs:comment>Reference: RT pxiii</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#k -->
+
+    <owl:Class rdf:about="&www;PKO.owl#k">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Elimination rate constant.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: h-1</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">unknown</rdfs:comment>
+        <rdfs:comment>Reference: RT pxiii</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#k12 -->
+
+    <owl:Class rdf:about="&www;PKO.owl#k12">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Transfer rate constant from central  to peripheral compartment.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: h-1</rdfs:comment>
+        <rdfs:comment>Reference: NA</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#k21 -->
+
+    <owl:Class rdf:about="&www;PKO.owl#k21">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Transfer rate constant from peripheral to central compartment.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: h-1</rdfs:comment>
+        <rdfs:comment>Reference: NA</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#ka -->
+
+    <owl:Class rdf:about="&www;PKO.owl#ka">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Absorption rate constant.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: h-1</rdfs:comment>
+        <rdfs:comment>Reference: RT pxiii</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#ke -->
+
+    <owl:Class rdf:about="&www;PKO.owl#ke">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: h-1</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Urinary excretion rate constant.</rdfs:comment>
+        <rdfs:comment>Reference: RT pxiii</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#km -->
+
+    <owl:Class rdf:about="&www;PKO.owl#km">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Rate constant for the elimination of a metabolite.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: h-1</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">unknown</rdfs:comment>
+        <rdfs:comment>Reference: RT pxiii</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#lambda_1 -->
+
+    <owl:Class rdf:about="&www;PKO.owl#lambda_1">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Disposition rate constants in a two-compartment model. </rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: h-1</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">unknown</rdfs:comment>
+        <rdfs:comment>Reference: GP p84</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#lambda_2 -->
+
+    <owl:Class rdf:about="&www;PKO.owl#lambda_2">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Disposition rate constants in a two-compartment model. </rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: h-1</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">unknown</rdfs:comment>
+        <rdfs:comment>Reference: GP p84</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#ss -->
+
+    <owl:Class rdf:about="&www;PKO.owl#ss">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#t1/2_ratio -->
+
+    <owl:Class rdf:about="&www;PKO.owl#t1/2_ratio">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Half-life ratio (drug interaction parameter).</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: Unit free</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">unknown</rdfs:comment>
+        <rdfs:comment>Reference: NA</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#t1_2 -->
+
+    <owl:Class rdf:about="&www;PKO.owl#t1_2">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Halif life: time  taken for the plasma concentration of a drug to reach half of its original concentration</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: h</rdfs:comment>
+        <rdfs:comment>Reference: RT pxiv</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#t1_2a -->
+
+    <owl:Class rdf:about="&www;PKO.owl#t1_2a">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Half-life of the fast phase drug disposition. </rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: h</rdfs:comment>
+        <rdfs:comment>Reference: NA</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#t1_2ß -->
+
+    <owl:Class rdf:about="&www;PKO.owl#t1_2ß">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Half-life of the slow phase drug disposition.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: h</rdfs:comment>
+        <rdfs:comment>Reference: NA</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#t_lag -->
+
+    <owl:Class rdf:about="&www;PKO.owl#t_lag">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Absorption lag time</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/2009/11/5/PKO.owl#tmax -->
+
+    <owl:Class rdf:about="&www;PKO.owl#tmax">
+        <rdfs:subClassOf rdf:resource="&www;PKO.owl#PK_Parameters_invivo"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Time at which the highest drug concentration occurs following administration of an extravascular dose.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Units: h</rdfs:comment>
+        <rdfs:comment>Reference: RT pxiv</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,690 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY purl "http://purl.obolibrary.org#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY biositemap "http://bioontology.org/ontologies/biositemap.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/DINTO_BRO_subset.owl#"
+     xml:base="http://purl.obolibrary.org/obo/DINTO_BRO_subset.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:purl="http://purl.obolibrary.org#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:biositemap="http://bioontology.org/ontologies/biositemap.owl#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/DINTO_BRO_subset.owl">
+        <owl:versionInfo xml:lang="en">BRO subset created by MHZ to be imported in DINTO. The substet contains those classes for Information Resources and their annotation properties.</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/DINTO_BRO_subset.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bioontology.org/ontologies/biositemap.owl#replacedBy -->
+
+    <owl:AnnotationProperty rdf:about="&biositemap;replacedBy">
+        <rdfs:domain rdf:resource="&owl;DeprecatedClass"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org#Definition -->
+
+    <owl:AnnotationProperty rdf:about="&purl;Definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="&skos;altLabel">
+        <rdfs:label xml:lang="en">alternative label</rdfs:label>
+        <skos:example xml:lang="en">Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. Mis-spelled terms are normally included as hidden labels (see skos:hiddenLabel).</skos:example>
+        <skos:definition xml:lang="en">An alternative lexical label for a resource.</skos:definition>
+        <rdfs:comment xml:lang="en">The range of skos:altLabel is the class of RDF plain literals.</rdfs:comment>
+        <rdfs:comment xml:lang="en">skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&rdfs;label"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#changeNote -->
+
+    <owl:AnnotationProperty rdf:about="&skos;changeNote">
+        <rdfs:label xml:lang="en">change note</rdfs:label>
+        <skos:definition xml:lang="en">A note about a modification to a concept.</skos:definition>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:subPropertyOf rdf:resource="&skos;note"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="&skos;definition">
+        <rdfs:label xml:lang="en">definition</rdfs:label>
+        <skos:definition xml:lang="en">A statement or formal explanation of the meaning of a concept.</skos:definition>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:subPropertyOf rdf:resource="&skos;note"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#editorialNote -->
+
+    <owl:AnnotationProperty rdf:about="&skos;editorialNote">
+        <rdfs:label xml:lang="en">editorial note</rdfs:label>
+        <skos:definition xml:lang="en">A note for an editor, translator or maintainer of the vocabulary.</skos:definition>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:subPropertyOf rdf:resource="&skos;note"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+    <owl:AnnotationProperty rdf:about="&skos;example">
+        <rdfs:label xml:lang="en">example</rdfs:label>
+        <skos:definition xml:lang="en">An example of the use of a concept.</skos:definition>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:subPropertyOf rdf:resource="&skos;note"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hiddenLabel -->
+
+    <owl:AnnotationProperty rdf:about="&skos;hiddenLabel">
+        <rdfs:label xml:lang="en">hidden label</rdfs:label>
+        <skos:definition xml:lang="en">A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations.</skos:definition>
+        <rdfs:comment xml:lang="en">The range of skos:hiddenLabel is the class of RDF plain literals.</rdfs:comment>
+        <rdfs:comment xml:lang="en">skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&rdfs;label"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#historyNote -->
+
+    <owl:AnnotationProperty rdf:about="&skos;historyNote">
+        <rdfs:label xml:lang="en">history note</rdfs:label>
+        <skos:definition xml:lang="en">A note about the past state/use/meaning of a concept.</skos:definition>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:subPropertyOf rdf:resource="&skos;note"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+    <owl:AnnotationProperty rdf:about="&skos;note">
+        <rdfs:label xml:lang="en">note</rdfs:label>
+        <skos:definition xml:lang="en">A general note, for any purpose.</skos:definition>
+        <skos:scopeNote xml:lang="en">This property may be used directly, or as a super-property for more specific note types.</skos:scopeNote>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="&skos;prefLabel">
+        <rdfs:label xml:lang="en">preferred label</rdfs:label>
+        <rdfs:comment xml:lang="en">A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag.</rdfs:comment>
+        <skos:definition xml:lang="en">The preferred lexical label for a resource, in a given language.</skos:definition>
+        <rdfs:comment xml:lang="en">The range of skos:prefLabel is the class of RDF plain literals.</rdfs:comment>
+        <rdfs:comment xml:lang="en">skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise
+      disjoint properties.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&rdfs;label"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
+
+    <owl:AnnotationProperty rdf:about="&skos;scopeNote">
+        <rdfs:label xml:lang="en">scope note</rdfs:label>
+        <skos:definition xml:lang="en">A note that helps to clarify the meaning and/or the use of a concept.</skos:definition>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:subPropertyOf rdf:resource="&skos;note"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Aggregate_Human_Data -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Aggregate_Human_Data">
+        <rdfs:label rdf:datatype="&xsd;string">Aggregate Human Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Clinical_Care_Data"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides data from clinical care that comprises combined data from multiple individual human subjects.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Atlas -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Atlas">
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Semi-Structured_Knowledge_Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Bibliographic_Resource -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Bibliographic_Resource">
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Semi-Structured_Knowledge_Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Book -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Book">
+        <rdfs:label rdf:datatype="&xsd;string">Book</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Narrative_Resource"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides access to a written or printed work of fiction or nonfiction, usually on sheets of paper fastened or bound together within covers.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Clinical_Care_Data -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Clinical_Care_Data">
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Data_Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Clinical_Research_Data -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Clinical_Research_Data">
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Data_Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Computational_Model -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Computational_Model">
+        <rdfs:label rdf:datatype="&xsd;string">Computational Model</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Structured_Knowledge_Resource"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides a simplified or symbolic representation of a system or phenomenon.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Conference_Proceeding -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Conference_Proceeding">
+        <rdfs:label rdf:datatype="&xsd;string">Conference Proceeding</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Narrative_Resource"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource the provides access to papers and/or talk and poster abstracts that are presented at a conference.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Data_Resource -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Data_Resource">
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Information_Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Delimited_Table -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Delimited_Table">
+        <rdfs:label rdf:datatype="&xsd;string">Delimited Table</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Structured_File"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides access to structured data that is separated by a sequence of one or more characters to mark the boundary between plain text or data streams.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Dynamic_Model -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Dynamic_Model">
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Computational_Model"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Experimental_Protocol -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Experimental_Protocol">
+        <rdfs:label rdf:datatype="&xsd;string">Experimental Protocol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Narrative_Resource"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides detailed plans for a scientific experiments, medical trials, or other pieces of research.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Flatfile_Distribution -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Flatfile_Distribution">
+        <rdfs:label rdf:datatype="&xsd;string">Flatfile Distribution</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Structured_File"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides access to structured data that is found in separate, unlinked files that is accessible via the internet.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Gene_Expression -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Gene_Expression">
+        <rdfs:label rdf:datatype="&xsd;string">Gene Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Molecular_and_Cellular_Data"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides data on the abundance of RNA that is coded from genes.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Government_Publication -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Government_Publication">
+        <rdfs:label rdf:datatype="&xsd;string">Government Publication</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Narrative_Resource"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource the provides access to a publicly available document that is  generated by a governing entity.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Image -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Image">
+        <rdfs:label rdf:datatype="&xsd;string">Image</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Unstructured_Knowledge_Resource"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides data in the form of images. </purl:Definition>
+        <skos:editorialNote rdf:datatype="&xsd;string">pending final vetting: review location in hierarchy</skos:editorialNote>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Individual_Human_Data -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Individual_Human_Data">
+        <rdfs:label rdf:datatype="&xsd;string">Individual Human Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Clinical_Care_Data"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides clinical care data at the level of an individual.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Information_Resource -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Information_Resource">
+        <rdfs:label rdf:datatype="&xsd;string">Information Resource</rdfs:label>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides data, knowledge or narrative.</purl:Definition>
+        <rdfs:comment rdf:datatype="&xsd;string">As per alignment with NIF resource type hierarchy.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Interaction_Network -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Interaction_Network">
+        <rdfs:label rdf:datatype="&xsd;string">Interaction Network</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Network_Model"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides a network model that includes nodes and edges based on physical interactions between the entities represented by the nodes.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Journal_Article -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Journal_Article">
+        <rdfs:label rdf:datatype="&xsd;string">Journal Article</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Narrative_Resource"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides access to reports that are published journals</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Knowledgebase -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Knowledgebase">
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Structured_Knowledge_Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#License -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#License">
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Narrative_Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Molecular_Interaction -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Molecular_Interaction">
+        <rdfs:label rdf:datatype="&xsd;string">Molecular Interaction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Molecular_and_Cellular_Data"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides data related to the measurement of interaction between molecules of any type. </purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Molecular_and_Cellular_Data -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Molecular_and_Cellular_Data">
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Data_Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Narrative_Resource -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Narrative_Resource">
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Information_Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Network_Model -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Network_Model">
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Computational_Model"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Object_Database -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Object_Database">
+        <rdfs:label rdf:datatype="&xsd;string">Object Database</rdfs:label>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides access to a database that represents information in the form of objects.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Ontology -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Ontology">
+        <rdfs:label rdf:datatype="&xsd;string">Ontology</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Structured_Knowledge_Resource"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides access to a set of concepts within a domain and the relationships between those concepts, used to reason about the objects within that domain.  </purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Paper -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Paper">
+        <rdfs:label rdf:datatype="&xsd;string">Paper</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Narrative_Resource"/>
+        <purl:Definition rdf:datatype="&xsd;string">An unpublished document, which may also be submitted to a publisher for publication.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Patent -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Patent">
+        <rdfs:label rdf:datatype="&xsd;string">Patent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Narrative_Resource"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides access to documents describing the exclusive right granted by a government to an inventor to manufacture, use, or sell an invention for a certain number of years.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Personal_Communication -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Personal_Communication">
+        <rdfs:label rdf:datatype="&xsd;string">Personal Communication</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Narrative_Resource"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides access to a communication between an agent and one or more specific recipients.,</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Phenotypic_Measurement -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Phenotypic_Measurement">
+        <rdfs:label rdf:datatype="&xsd;string">Phenotypic Measurement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Molecular_and_Cellular_Data"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides data related to any kind of measurement designed to describe an observable characteristic or trait. </purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Protein-Protein_Interaction -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Protein-Protein_Interaction">
+        <rdfs:label rdf:datatype="&xsd;string">Protein-Protein Interaction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Interaction_Network"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides a description of the interaction network of proteins.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Protein_Expression -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Protein_Expression">
+        <rdfs:label rdf:datatype="&xsd;string">Protein Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Molecular_and_Cellular_Data"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides data related to the presence and abundance of proteins from a cell or tissue sample.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#RDF_Data -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#RDF_Data">
+        <rdfs:label rdf:datatype="&xsd;string">RDF Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Structured_File"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides access to structured data that is formatted according to the Resource Description Framework, a language for representing information about resources in the World Wide Web.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Relational_Database -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Relational_Database">
+        <rdfs:label rdf:datatype="&xsd;string">Relational Database</rdfs:label>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides access to a database that comprises a normalized data set constructed according to a specific entity-relation data model.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Report -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Report">
+        <rdfs:label rdf:datatype="&xsd;string">Report</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Narrative_Resource"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides access to documents describing an account, event, situation, or the like, usually as the result of observation, inquiry, etc.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Semi-Structured_Knowledge_Resource -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Semi-Structured_Knowledge_Resource">
+        <rdfs:label rdf:datatype="&xsd;string">Semi-Structured Knowledge Resource</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Information_Resource"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides data that is partially structured. </purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Software_Technology_Protocol -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Software_Technology_Protocol">
+        <rdfs:label rdf:datatype="&xsd;string">Software Technology Protocol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Narrative_Resource"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides access to information on how to implement and use a computer program.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Standard_Specification -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Standard_Specification">
+        <rdfs:label rdf:datatype="&xsd;string">Standard Specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Narrative_Resource"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides access to a generally agreed upon set of rules for representation.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Structured_File -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Structured_File">
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Structured_Knowledge_Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Structured_Knowledge_Resource -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Structured_Knowledge_Resource">
+        <rdfs:label rdf:datatype="&xsd;string">Structured Knowledge Resource</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Information_Resource"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides access to collection of data records arranged according to some semantic framework.  The semantic framework may be minimally expressive - such as a simple controlled vocabulary - or highly expressive such as a formally structured ontology.  Such resources may include only a representation of universal/classes/categories or may be linked to individual instance data typed according to a set of asserted classes (i.e., a knowledgebase).</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Thesis -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Thesis">
+        <rdfs:label rdf:datatype="&xsd;string">Thesis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Narrative_Resource"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides access to a document created to summarize research findings associated with the completion of an academic degree.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Three_D_Image -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Three_D_Image">
+        <rdfs:label rdf:datatype="&xsd;string">Three D Image</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Image"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides image data consisting of length, width and depth.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Two_D_Image -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Two_D_Image">
+        <rdfs:label rdf:datatype="&xsd;string">Two D Image</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Image"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides image data consisting of length and width, but no depth.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Unstructured_Knowledge_Resource -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Unstructured_Knowledge_Resource">
+        <rdfs:label rdf:datatype="&xsd;string">Unstructured Knowledge Resource</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Information_Resource"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides access to collection of data or information that is not easily queryable without using metadata about the resource.</purl:Definition>
+        <skos:editorialNote rdf:datatype="&xsd;string">Suggested child terms: audio track, slide, and video per NIF.  Work with NIF to generate definitions.</skos:editorialNote>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Volume_Model_Scene_Data -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Volume_Model_Scene_Data">
+        <rdfs:label rdf:datatype="&xsd;string">Volume Model Scene Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Computational_Model"/>
+        <purl:Definition rdf:datatype="&xsd;string"></purl:Definition>
+        <skos:editorialNote rdf:datatype="&xsd;string">pending final vetting: provide definition</skos:editorialNote>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Website -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Website">
+        <rdfs:label rdf:datatype="&xsd;string">Website</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Narrative_Resource"/>
+        <skos:historyNote rdf:datatype="&xsd;string">Deprecated for BRO v3.0</skos:historyNote>
+        <purl:Definition rdf:datatype="&xsd;string">Resource that provides access to software, application, or toolkit that can develop access to a connected group of pages on the World Wide Web regarded as a single entity, usually maintained by one person or organization and devoted to a single topic or several closely related topics.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#White_Paper -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#White_Paper">
+        <rdfs:label rdf:datatype="&xsd;string">White Paper</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Narrative_Resource"/>
+        <purl:Definition rdf:datatype="&xsd;string">A publication that is an authoritative report or guide that often addresses issues and how to solve them.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#XML_Data -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#XML_Data">
+        <rdfs:label rdf:datatype="&xsd;string">XML Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Structured_File"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides access to structured data that is in XML, a self-descriptive format to store and transport data.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#XML_Database -->
+
+    <owl:Class rdf:about="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#XML_Database">
+        <rdfs:label rdf:datatype="&xsd;string">XML Database</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Object_Database"/>
+        <purl:Definition rdf:datatype="&xsd;string">A resource that provides access to a database that stores XML.</purl:Definition>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://bioontology.org/ontologies/BiomedicalResources.owl#Environmental_Health_and_Safety">
+        <rdfs:label rdf:datatype="&xsd;string">Environmental Health and Safety Resource</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
